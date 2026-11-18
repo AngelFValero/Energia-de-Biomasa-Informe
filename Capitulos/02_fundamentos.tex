@@ -1,0 +1,175 @@
+\chapter{Fundamentos de la biomasa}
+\label{cap:fundamentos}
+
+Este capítulo desarrolla las características fundamentales de la biomasa como recurso energético, desde su origen biológico y carácter renovable hasta su clasificación, propiedades fisicoquímicas, pretratamiento y logística de suministro. Se presta especial atención a los parámetros que determinan su comportamiento como combustible y que condicionan el diseño y la selección de los equipos en una planta de potencia.
+
+\section{Concepto y carácter renovable}
+\label{sec:concepto}
+
+La biomasa se define como el conjunto de materia orgánica de origen biológico reciente (vegetal, animal o microbiano), no fosilizada, que puede aprovecharse como fuente de energía. Incluye madera, residuos forestales, cultivos energéticos, restos agrícolas, estiércol, subproductos agroindustriales y la fracción orgánica biodegradable de los residuos sólidos urbanos \cite{mckendry2002energy}. Desde el punto de vista energético, la biomasa constituye energía solar almacenada en enlaces químicos mediante la fotosíntesis, proceso por el cual los organismos vegetales capturan radiación solar y transforman dióxido de carbono y agua en compuestos orgánicos:
+\begin{equation}
+6\,\mathrm{CO_2} + 6\,\mathrm{H_2O} + \text{energía solar} \longrightarrow \mathrm{C_6H_{12}O_6} + 6\,\mathrm{O_2}
+\end{equation}
+
+La fotosíntesis es un proceso de baja eficiencia global: en términos generales convierte menos del 1 al 2~\% de la radiación solar incidente en biomasa. Como consecuencia, aunque el recurso es abundante a escala planetaria, presenta una baja densidad energética por unidad de superficie, lo que condiciona su recolección, transporte y aprovechamiento industrial a gran escala.
+
+En terminología técnica, la Organización de las Naciones Unidas para la Alimentación y la Agricultura (FAO) distingue entre \textit{biocombustible} ---el portador material de energía, como leña, astillas, pellets, biogás o bioetanol--- y \textit{bioenergía} ---la energía útil obtenida a partir de dicho portador--- \cite{fao2004ubet}.
+
+\subsection{Composición lignocelulósica}
+La biomasa vegetal seca está formada fundamentalmente por tres polímeros estructurales cuyas proporciones determinan su comportamiento térmico y biológico en cada ruta de conversión \cite{mckendry2002energy}. La Tabla~\ref{tab:lignocelulosa} resume sus características principales.
+
+\begin{table}[htbp]
+\centering
+\caption{Componentes estructurales de la biomasa lignocelulósica \cite{mckendry2002energy}.}
+\label{tab:lignocelulosa}
+\begin{tabularx}{\textwidth}{@{}l l X X@{}}
+\toprule
+\textbf{Componente} & \textbf{Proporción (madera)} & \textbf{Naturaleza química} & \textbf{Relevancia para la conversión} \\
+\midrule
+Celulosa & 40--50~\% & Polímero lineal y cristalino de glucosa & Base de la fermentación y digestión; se descompone térmicamente entre 300 y 400~\textdegree C. \\
+Hemicelulosa & 20--35~\% & Polímero ramificado de diversos azúcares & Primera fracción en degradarse térmicamente (200--300~\textdegree C). \\
+Lignina & 15--30~\% & Polímero aromático que aporta rigidez & Difícil de degradar biológicamente; alto poder calorífico; favorece las rutas térmicas. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Ciclo del carbono y sostenibilidad}
+Desde la perspectiva del carbono, el $\mathrm{CO_2}$ liberado durante la conversión energética de la biomasa corresponde al que la planta absorbió previamente durante su crecimiento, en una escala temporal de meses a décadas (\textit{ciclo corto del carbono}). En contraste, la combustión de combustibles fósiles libera carbono que permaneció almacenado en la corteza terrestre durante millones de años.
+
+No obstante, la biomasa es renovable únicamente si el recurso se repone a un ritmo compatible con su consumo, sin comprometer la fertilidad del suelo ni el equilibrio de los ecosistemas. Asimismo, la neutralidad de carbono no es automática: el Grupo Intergubernamental de Expertos sobre el Cambio Climático (IPCC) señala que el balance climático real depende de las emisiones de toda la cadena de suministro (cosecha, transporte, secado, densificación), de los posibles cambios directos e indirectos en el uso del suelo y de que la tasa de extracción no supere la regeneración \cite{chum2011ipcc}. Los balances más favorables se alcanzan al valorizar residuos que de otro modo se descompondrían emitiendo metano o se quemarían a cielo abierto.
+
+\section{Clasificación por origen}
+\label{sec:clasificacion_origen}
+
+Aunque la biomasa puede clasificarse según el reino biológico (vegetal, animal o microbiana), en ingeniería energética resulta más práctico clasificarla por fuente o sector de procedencia. El origen determina la humedad, estacionalidad, disponibilidad geográfica, contenido de cenizas y logística de recolección, condicionando directamente la tecnología de conversión \cite{irena2023residues}.
+
+\begin{table}[htbp]
+\centering
+\small
+\caption{Clasificación de la biomasa según su origen y sector de procedencia.}
+\label{tab:clasificacion_origen}
+\begin{tabularx}{\textwidth}{@{}p{2.6cm} X p{2.7cm} X@{}}
+\toprule
+\textbf{Categoría} & \textbf{Ejemplos representativos} & \textbf{Ruta típica} & \textbf{Consideraciones de ingeniería} \\
+\midrule
+Residuos agrícolas & Paja y cascarilla de arroz, rastrojo de maíz, restos de poda & Combustión, gasificación & Estacionales y dispersos; la cascarilla de arroz presenta elevado contenido de cenizas (sílice). \\
+Residuos agroindustriales & Bagazo de caña, cascarilla de café, cáscara de coco, raquis de palma, efluentes & Combustión en calderas (CHP); digestión de efluentes & Concentrados en planta industrial, sin costo adicional de recolección. El bagazo representa $\sim$30~\% de la caña molida \cite{er2019centroamerica}. \\
+Residuos forestales y madereros & Ramas, corteza, aserrín, astillas, licor negro & Combustión, pellets, gasificación & Base de las grandes centrales térmicas y de cogeneración nórdicas. \\
+Residuos ganaderos & Estiércol vacuno y porcino, gallinaza & Digestión anaeróbica & Muy húmedos; su tratamiento evita emisiones fugitivas de metano. \\
+Residuos urbanos & Fracción orgánica de RSU, lodos de depuradora, gas de relleno & Digestión, captación de biogás, valorización & Requiere separación de inertes (plásticos, metales, vidrio); integra gestión de residuos y energía. \\
+Cultivos energéticos & Eucalipto o sauce de rotación corta, \textit{Miscanthus}, pasto elefante, microalgas & Todas & Mayor uniformidad, pero pueden competir por suelo y agua con cultivos alimentarios \cite{fao2016befs}. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+En el contexto biológico, la biomasa vegetal abarca los residuos agrícolas, forestales y cultivos energéticos; la biomasa animal comprende los estiércoles y subproductos pecuarios; y la biomasa microbiana aparece tanto como recurso (microalgas) como agente activo de conversión en la digestión anaeróbica. Como ejemplo local en Panamá, la paja canalera (\textit{Saccharum spontaneum}), especie invasora abundante en la cuenca del Canal, ha sido estudiada en la Universidad Tecnológica de Panamá (UTP) como materia prima para gasificación \cite{utp_pajacanalera}. Asimismo, la norma ISO~17225-1 establece las especificaciones y clases generales para combustibles sólidos de origen biológico \cite{iso17225}.
+
+\section{Clasificación por estado físico}
+\label{sec:estado_fisico}
+
+La biomasa puede presentarse en estado sólido, líquido o gaseoso, lo cual define los sistemas de almacenamiento, transporte, alimentación y conversión:
+
+\begin{itemize}[leftmargin=1.5em]
+\item \textbf{Biomasa sólida:} Comprende leña, astillas (\textit{wood chips}), aserrín, bagazo, cascarillas, residuos agrícolas, pellets y briquetas. Es la forma predominante en la generación eléctrica a mediana y gran escala mediante calderas de parrilla o lecho fluidizado. Los pellets y briquetas son combustibles densificados por compresión mecánica que reducen el volumen de transporte y permiten una alimentación automatizada.
+\item \textbf{Biomasa líquida:} Incluye aceites vegetales, bioetanol (fermentación de azúcares o almidones), biodiésel (transesterificación de aceites y grasas), bioaceite (\textit{bio-oil} de pirólisis) y licor negro de la industria papelera. Salvo el licor negro y los aceites crudos, son vectores obtenidos mediante conversión previa.
+\item \textbf{Biomasa gaseosa:} Abarca el biogás (digestión anaeróbica), el gas de relleno sanitario y el gas de síntesis o \textit{syngas} (gasificación). Permite alimentar motores de combustión interna, turbinas de gas o procesos de síntesis química con un control preciso de la mezcla aire-combustible.
+\end{itemize}
+
+\section{Propiedades de la biomasa como combustible}
+\label{sec:propiedades}
+
+En una planta de potencia, las propiedades fisicoquímicas del combustible deciden la tecnología de conversión, el dimensionamiento de los equipos y los límites operativos de la caldera \cite{idae2007biomasa, vanloo2007handbook}. En ingeniería energética se considera un combustible heterogéneo cuyas características varían según la especie, las condiciones de cultivo y el tratamiento previo.
+
+\subsection{Contenido de humedad y poder calorífico}
+La humedad representa la fracción de agua presente en la biomasa. La madera verde contiene entre 40 y 60~\% de humedad en base húmeda, y el bagazo sale del molino azucarero con cerca del 50~\% \cite{idae2007biomasa, vanloo2007handbook}. Puede expresarse en base húmeda ($w_{\mathrm{bh}}$) o en base seca ($w_{\mathrm{bs}}$):
+\begin{equation}
+w_{\mathrm{bh}} = \frac{m_{\mathrm{agua}}}{m_{\mathrm{total}}}, \qquad w_{\mathrm{bs}} = \frac{m_{\mathrm{agua}}}{m_{\mathrm{seca}}}
+\end{equation}
+donde una muestra con 20~\% de humedad en base húmeda equivale a 25~\% en base seca.
+
+El agua no aporta energía química y consume calor latente para evaporarse durante la combustión, reduciendo la temperatura de llama y el poder calorífico inferior (PCI) disponible tal como se recibe:
+\begin{equation}
+\mathrm{PCI}_{\text{húmedo}} \approx \mathrm{PCI}_{\text{seco}} \cdot (1 - w_{\mathrm{bh}}) - 2{,}44 \cdot w_{\mathrm{bh}} \quad [\text{MJ/kg}]
+\end{equation}
+donde $2{,}44~\text{MJ/kg}$ corresponde al calor latente de vaporización del agua a 25~\textdegree C. Como ejemplo numérico, una madera con $\mathrm{PCI}_{\text{seco}} = 18{,}5~\text{MJ/kg}$ y 50~\% de humedad ($w_{\mathrm{bh}} = 0{,}50$) ve reducido su poder calorífico a:
+\begin{equation*}
+\mathrm{PCI}_{\text{húmedo}} \approx 18{,}5 \times 0{,}50 - 2{,}44 \times 0{,}50 = 9{,}25 - 1{,}22 \approx 8{,}0~\text{MJ/kg}
+\end{equation*}
+es decir, menos de la mitad del valor seco; en cambio, secada al aire ($w_{\mathrm{bh}} = 0{,}15$), alcanza aproximadamente $15{,}4~\text{MJ/kg}$.
+
+\subsection{Análisis próximo y análisis elemental}
+El \textbf{análisis próximo} cuantifica cuatro fracciones: humedad, materia volátil, carbono fijo y cenizas. La biomasa posee entre 70 y 85~\% de materia volátil en base seca, frente al 20--40~\% típico del carbón mineral \cite{vanloo2007handbook, mckendry2002energy}. Este elevado contenido de volátiles hace que la biomasa encienda con facilidad, arda con llama larga y sea especialmente apta para procesos de gasificación y pirólisis. El carbono fijo es relativamente bajo (15--25~\%) y en base seca cumple:
+\begin{equation}
+\mathrm{CF} = 100 - \mathrm{MV} - \mathrm{Cenizas} \quad [\%]
+\end{equation}
+El contenido de cenizas varía desde menos de 1--2~\% en madera limpia hasta 5--10~\% en pajas de cereales y 15--20~\% en cascarilla de arroz.
+
+El \textbf{análisis elemental} (o último) determina las fracciones másicas en base seca de carbono ($\mathrm{C} \approx 45\text{--}50~\%$), hidrógeno ($\mathrm{H} \approx 6~\%$), oxígeno ($\mathrm{O} \approx 40\text{--}45~\%$), nitrógeno ($\mathrm{N} < 1~\%$) y azufre ($\mathrm{S}$ muy bajo). El alto contenido de oxígeno explica su menor poder calorífico frente al carbón, mientras que el bajo azufre se traduce en emisiones mínimas de $\mathrm{SO_2}$.
+
+\subsection{Poder calorífico superior, inferior y aire de combustión}
+El poder calorífico superior (PCS) incluye el calor latente de condensación del agua formada por la oxidación del hidrógeno; el poder calorífico inferior (PCI) asume que dicha agua abandona la caldera en fase vapor, razón por la cual las eficiencias de calderas se expresan sobre el PCI:
+\begin{equation}
+\mathrm{PCI}_{\text{seco}} \approx \mathrm{PCS}_{\text{seco}} - 2{,}44 \cdot 9 \cdot H \quad [\text{MJ/kg}]
+\end{equation}
+donde $H$ es la fracción másica de hidrógeno (9~kg de agua por kilogramo de hidrógeno). A partir del análisis elemental (en porcentajes en base seca), el PCS puede estimarse mediante la correlación unificada de Channiwala y Parikh \cite{channiwala2002hhv}:
+\begin{equation}
+\mathrm{PCS} \approx 0{,}3491\,\mathrm{C} + 1{,}1783\,\mathrm{H} + 0{,}1005\,\mathrm{S} - 0{,}1034\,\mathrm{O} - 0{,}0151\,\mathrm{N} - 0{,}0211\,\mathrm{A} \quad [\text{MJ/kg}]
+\end{equation}
+Para una madera seca con $\mathrm{C} = 50~\%$, $\mathrm{H} = 6~\%$, $\mathrm{O} = 43~\%$, $\mathrm{N} = 0{,}3~\%$, $\mathrm{S} = 0{,}05~\%$ y cenizas $\mathrm{A} = 0{,}65~\%$, la correlación arroja $\mathrm{PCS} \approx 20{,}1~\text{MJ/kg}$ y $\mathrm{PCI}_{\text{seco}} \approx 18{,}7~\text{MJ/kg}$.
+
+Asimismo, el oxígeno contenido en la propia estructura molecular de la biomasa reduce el requerimiento de aire externo. El oxígeno y aire estequiométricos por kilogramo de combustible seco se calculan como:
+\begin{equation}
+\mathrm{O_2}_{\text{esteq}} = 32 \left(\frac{C}{12} + \frac{H}{4} - \frac{O}{32}\right) \quad [\text{kg }\mathrm{O_2}/\text{kg}], \qquad \mathrm{Aire}_{\text{esteq}} = \frac{\mathrm{O_2}_{\text{esteq}}}{0{,}232}
+\end{equation}
+Para la madera del ejemplo anterior se obtienen $\approx 1{,}38~\text{kg O}_2/\text{kg}$ y $\approx 6{,}0~\text{kg}$ de aire estequiométrico por kilogramo de biomasa seca ($\approx 8{,}4~\text{kg}$ con 40~\% de exceso de aire), frente a 10--11~kg/kg para carbón bituminoso y $\sim 14~\text{kg/kg}$ para fuel oil.
+
+\subsection{Química de las cenizas y propiedades comparativas}
+Las cenizas de biomasa, en particular las herbáceas y agrícolas, son ricas en potasio, sodio, cloro y sílice. A altas temperaturas estos compuestos forman eutécticos de bajo punto de fusión que provocan \textit{escorificación} (depósitos fundidos adheridos en el hogar), ensuciamiento de haces tubulares y corrosión por cloruros en los sobrecalentadores \cite{vanloo2007handbook}. Por esta razón, las calderas de biomasa operan con temperaturas de vapor vivo más moderadas (450--540~\textdegree C) que las centrales modernas de carbón, limitando la eficiencia térmica del ciclo Rankine. La Tabla~\ref{tab:propiedades_combustibles} presenta valores orientativos de distintos combustibles de biomasa.
+
+\begin{table}[htbp]
+\centering
+\caption{Propiedades típicas de combustibles de biomasa frente al carbón bituminoso \cite{idae2007biomasa, vanloo2007handbook, mckendry2002energy}.}
+\label{tab:propiedades_combustibles}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+\textbf{Combustible} & \textbf{Humedad típica (b.h.)} & \textbf{PCI típico (tal como se recibe)} & \textbf{Cenizas (b.s.)} \\
+\midrule
+Pellets de madera & $< 10~\%$ & 16,5--17,5~MJ/kg & $< 1~\%$ \\
+Leña seca al aire & 15--20~\% & 14--16~MJ/kg & $\approx 1~\%$ \\
+Astillas verdes & 40--55~\% & 7--10~MJ/kg & 1--2~\% \\
+Bagazo de caña & $\approx 50~\%$ & 7--8~MJ/kg & 2--5~\% \\
+Cascarilla de arroz & 8--12~\% & 13--15~MJ/kg & 15--20~\% \\
+Paja de cereales & 10--15~\% & 14--15~MJ/kg & 5--10~\% \\
+Carbón bituminoso (referencia) & 5--10~\% & 25--30~MJ/kg & 5--15~\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Pretratamiento y logística de suministro}
+\label{sec:pretratamiento}
+
+La baja densidad energética volumétrica constituye la principal desventaja logística de la biomasa. Mientras las astillas de madera presentan una densidad aparente de 200--350~kg/m$^3$ y los pellets alcanzan 600--700~kg/m$^3$, un mismo camión transporta varias veces menos energía útil que con carbón mineral. Para acondicionar el combustible a las exigencias del reactor se aplican diversas operaciones de pretratamiento (Tabla~\ref{tab:pretratamientos}).
+
+\begin{table}[htbp]
+\centering
+\caption{Principales operaciones de pretratamiento de la biomasa.}
+\label{tab:pretratamientos}
+\begin{tabularx}{\textwidth}{@{}l X X@{}}
+\toprule
+\textbf{Pretratamiento} & \textbf{Descripción del proceso} & \textbf{Efecto en la planta de potencia} \\
+\midrule
+Secado & Reducción de humedad natural (al aire) o forzada mediante secadores rotatorios o de banda con calor residual. & Incrementa el PCI útil, mejora la estabilidad de llama y eleva la eficiencia de la caldera. \\
+Reducción de tamaño & Astillado, trituración o molienda con molinos de martillos; clasificación por tamices y separación de metales/piedras. & Homogeneiza la alimentación; indispensable para lecho fluidizado y combustión pulverizada. \\
+Densificación & Compactación mecánica a alta presión en pellets (6--8~mm, humedad $< 10~\%$) o briquetas. & Multiplica la densidad energética volumétrica; viabiliza el transporte a larga distancia y la dosificación automática. \\
+Torrefacción & Tratamiento térmico suave (200--300~\textdegree C) en ausencia de oxígeno. & Produce un sólido seco, hidrófobo y friable, similar al carbón, que facilita la molienda y la co-combustión. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+El almacenamiento también es un aspecto crítico de ingeniería: las pilas de biomasa húmeda sufren degradación biológica con pérdida de materia seca, pudiendo autocalentarse por actividad microbiana e incluso autoinflamarse; por su parte, los pellets se desintegran en contacto con la humedad. Todo ello restringe el radio económico de abastecimiento de una central y define su escala óptima.
+
+Para dimensionar la logística de una planta típica, considérese una central dedicada de $10~\mathrm{MW_e}$ con eficiencia eléctrica neta del 25~\%, lo que exige una potencia térmica de combustible de $10 / 0{,}25 = 40~\mathrm{MW_{th}}$. Si se alimenta con astillas de $\mathrm{PCI} = 9~\text{MJ/kg}$, el consumo másico asciende a:
+\begin{equation*}
+\dot{m}_{\mathrm{comb}} = \frac{40~\text{MJ/s}}{9~\text{MJ/kg}} \approx 4{,}4~\text{kg/s} \approx 16~\text{t/h} \approx 384~\text{t/día}
+\end{equation*}
+Con un factor de operación de $8\,000~\text{h/año}$, la planta demanda alrededor de $128\,000~\text{t/año}$, equivalentes a unos 13 camiones diarios de 30 toneladas. Como regla general de diseño, la biomasa seca y lignocelulósica (madera, pajas, cascarillas) se destina a rutas termoquímicas, mientras que la biomasa muy húmeda (estiércoles, efluentes, residuos de alimentos) se dirige a rutas bioquímicas.

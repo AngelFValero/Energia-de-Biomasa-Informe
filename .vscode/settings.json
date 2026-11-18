@@ -1,0 +1,66 @@
+{
+  "latex-workshop.latex.outDir": "%DIR%",
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "pdflatex -> bibtex -> pdflatex*2 (aux en build)",
+      "tools": [
+        "pdflatex-aux",
+        "bibtex-aux",
+        "pdflatex-aux",
+        "pdflatex-aux"
+      ]
+    },
+    {
+      "name": "pdflatex (aux en build)",
+      "tools": [
+        "pdflatex-aux"
+      ]
+    }
+  ],
+  "latex-workshop.latex.tools": [
+    {
+      "name": "pdflatex-aux",
+      "command": "pdflatex",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-aux-directory=%DIR%/build",
+        "%DOC%"
+      ],
+      "env": {}
+    },
+    {
+      "name": "bibtex-aux",
+      "command": "bibtex",
+      "args": [
+        "%DIR%/build/%DOCFILE%"
+      ],
+      "env": {}
+    }
+  ],
+  "latex-workshop.latex.clean.fileTypes": [
+    "*.aux",
+    "*.bbl",
+    "*.blg",
+    "*.idx",
+    "*.ind",
+    "*.lof",
+    "*.lot",
+    "*.out",
+    "*.toc",
+    "*.acn",
+    "*.acr",
+    "*.alg",
+    "*.glg",
+    "*.glo",
+    "*.gls",
+    "*.fls",
+    "*.log",
+    "*.fdb_latexmk",
+    "*.snm",
+    "*.synctex.gz",
+    "*.nav",
+    "*.vrb"
+  ]
+}
